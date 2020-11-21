@@ -1,6 +1,6 @@
 # Flutter_Property
 
-A new Flutter application.
+Flutter Property UI with transparent navigation drawer.
 
 ## Screenshots
 
