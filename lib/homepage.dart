@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:property_app/productpage.dart';
 import 'package:property_app/size_config.dart';
@@ -70,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             IconButton(
                               icon: Icon(
-                                Icons.shopping_cart,
+                                Icons.call,
                                 color: Colors.white,
                                 size: 30.0,
                               ),

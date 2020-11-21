@@ -10,85 +10,59 @@ class Favourites extends StatefulWidget {
 class _FavouritesState extends State<Favourites> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
+    return Container(
+      color: Colors.black,
+      child: SafeArea(
+        child: Scaffold(
           backgroundColor: Colors.black,
-          automaticallyImplyLeading: false,
-          elevation: 0.0,
-          title:  new Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Text('Favourites',style: TextStyle(color: Colors.white),),
-                    IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        color: Colors.white,
-                        size: 30.0,
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            automaticallyImplyLeading: false,
+            elevation: 0.0,
+            title:  new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(
+                          Icons.menu,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        onPressed: () =>
+                            Scaffold.of(context).openDrawer(),
                       ),
-                      onPressed: () =>
-                          Scaffold.of(context).openDrawer(),
-                    ),
-                  ],
-                ),
-                IconButton(
-                  icon: Icon(
-                    Icons.search,
-                    color: Colors.white,
-                    size: 30.0,
+                      Text('Favourites',style: TextStyle(color: Colors.white),),
+
+                    ],
                   ),
-                  onPressed: () {},
-                ),
-              ]),
-        ),
+                  IconButton(
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                      size: 30.0,
+                    ),
+                    onPressed: () {},
+                  ),
+                ]),
+          ),
 
-        body:ListView(
-          children: <Widget>[
+          body:ListView(
+            children: <Widget>[
 
-            Center(
-              child:
               Container(
                 margin: EdgeInsets.only(left: 20,right: 20),
-                child: Column(
-                  children: <Widget>[
-
-                    Container(
-                      width: 140,
-                        height: 140,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white,width: 2),
-                        image: DecorationImage(
-                            image: AssetImage('assets/heart.gif'))
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(top: 10),
-                      child: Center(
-                        child: Text('Favourites',
-                          style: TextStyle(color: Colors.white,fontSize: 20),),
-                      ),
-                    )
-
-                  ],
-                ),
+                child: _stuff(),
               ),
-            ),
-
-            Container(
-              margin: EdgeInsets.only(left: 20,right: 20),
-              child: _stuff(),
-            ),
-          ],
+            ],
+          ),
+          drawer: Theme(
+              data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+              child: Drawer(
+                child: AppDrawer(),
+              )),
         ),
-        drawer: Theme(
-            data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
-            child: Drawer(
-              child: AppDrawer(),
-            )),
       ),
     );
   }

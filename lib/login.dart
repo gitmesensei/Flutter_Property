@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:property_app/register.dart';
-
-import 'homepage.dart';
 import 'main.dart';
 
 class LoginPage extends StatefulWidget {
@@ -17,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
           body: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/log.jpg'), fit: BoxFit.cover,),
+                    image: AssetImage('assets/log.jpg'), fit: BoxFit.cover,colorFilter: ColorFilter.mode(Colors.black38, BlendMode.darken)),
               ),
               child:ListView(
                 children: <Widget>[

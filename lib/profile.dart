@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:property_app/productpage.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -78,7 +77,7 @@ class _ProfileState extends State<Profile> {
               Center(
                 child:Container(
                   margin: EdgeInsets.only(top: 20,left: 20,right: 20,bottom: 20),
-                  height: 190,
+                  height: 250,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white,width: 4),
                     borderRadius: BorderRadius.circular(30),
@@ -90,32 +89,50 @@ class _ProfileState extends State<Profile> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
 
-                          Container(
-                            margin:EdgeInsets.all(18.5),
-                            padding:EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white,width: 4),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Icon(Icons.border_color,color: Colors.white,),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Container(
+                                margin:EdgeInsets.all(18.5),
+                                padding:EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white,width: 4),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Icon(Icons.border_color,color: Colors.white,),
+                              ),
+                              Text('Edit Profile',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
+                            ],
                           ),
-                          Container(
-                            margin:EdgeInsets.all(18.5),
-                            padding:EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white,width: 4),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Icon(Icons.home,color: Colors.white,),
+                          Column(
+                            children: [
+                              Container(
+                                margin:EdgeInsets.all(18.5),
+                                padding:EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white,width: 4),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Icon(Icons.home,color: Colors.white,),
+                              ),
+                              Text('Your Home',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
+
+                            ],
                           ),
-                          Container(
-                            margin:EdgeInsets.all(18.5),
-                            padding:EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white,width: 4),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Icon(Icons.account_balance_wallet,color: Colors.white,),
+                          Column(
+                            children: [
+                              Container(
+                                margin:EdgeInsets.all(18.5),
+                                padding:EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white,width: 4),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Icon(Icons.account_balance_wallet,color: Colors.white,),
+                              ),
+                              Text('Wallet',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
+
+                            ],
                           ),
                         ],
                       ),
@@ -123,32 +140,50 @@ class _ProfileState extends State<Profile> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
 
-                          Container(
-                            margin:EdgeInsets.all(18.5),
-                            padding:EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white,width: 4),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Icon(Icons.offline_bolt,color: Colors.white,),
+                          Column(
+                            children: [
+                              Container(
+                                margin:EdgeInsets.all(18.5),
+                                padding:EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white,width: 4),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Icon(Icons.local_fire_department,color: Colors.white,),
+                              ),
+                              Text('Hot Prop',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
+
+                            ],
                           ),
-                          Container(
-                            margin:EdgeInsets.all(18.5),
-                            padding:EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white,width: 4),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Icon(Icons.star,color: Colors.white,),
+                          Column(
+                            children: [
+                              Container(
+                                margin:EdgeInsets.all(18.5),
+                                padding:EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white,width: 4),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Icon(Icons.star,color: Colors.white,),
+                              ),
+                              Text('Favourite Prop',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
+
+                            ],
                           ),
-                          Container(
-                            margin:EdgeInsets.all(18.5),
-                            padding:EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white,width: 4),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Icon(Icons.monetization_on,color: Colors.white,),
+                          Column(
+                            children: [
+                              Container(
+                                margin:EdgeInsets.all(18.5),
+                                padding:EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white,width: 4),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Icon(Icons.monetization_on,color: Colors.white,),
+                              ),
+                              Text('Cash Backs',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
+
+                            ],
                           ),
                         ],
                       ),
@@ -156,592 +191,12 @@ class _ProfileState extends State<Profile> {
                     ],
                   ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 20,right: 20),
-                child: _stuff(),
-              )//h
+              ), //h
 
             ],
           ) ,
         )
         )
     ));
-  }
-  Widget _stuff() {
-
-    return Wrap(
-      children: <Widget>[
-
-
-        Container(
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/b2.jpg'), fit: BoxFit.fill),
-                borderRadius: BorderRadius.circular(30.0),
-                boxShadow: [BoxShadow(color: Colors.black12, spreadRadius: 2)]),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-
-                    InkWell(
-                      onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductPage())),
-                      child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Row(
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(10),
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.pinkAccent,
-                                  border: Border.all(
-                                      width: 2.0,
-                                      color: Colors.white,
-                                      style: BorderStyle.solid),
-                                  image: DecorationImage(
-                                      image: AssetImage('assets/face1.jpg'),
-                                      fit: BoxFit.cover)),
-                            ),
-                            Padding(
-                                padding: EdgeInsets.only(left: 4),
-                                child: Text(
-                                  'Rajiv Sharma',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                      shadows: [
-                                        Shadow(blurRadius: 2, color: Colors.black)
-                                      ]),
-                                )),
-                            Padding(
-                                padding: EdgeInsets.only(left: 30, right: 10),
-                                child: Text(
-                                  '22 sep,19',
-                                  style: TextStyle(color: Colors.white, shadows: [
-                                    Shadow(blurRadius: 2, color: Colors.black)
-                                  ]),
-                                )),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            top: 100, left: 10, bottom: 10, right: 10),
-                        child: Row(
-                          children: <Widget>[
-                            RaisedButton.icon(
-                              onPressed: () {},
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.lightBlue,
-                                size: 20,
-                              ),
-                              label: Text(
-                                'For Buy,',
-                                style: TextStyle(
-                                    color: Colors.lightBlue, fontSize: 14),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 40, right: 0),
-                              child: Text(
-                                'Rohini,Delhi',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              ),
-                            )
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            )), //finish
-
-        Container(
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/b3.jpg'), fit: BoxFit.fill),
-                borderRadius: BorderRadius.circular(30.0),
-                boxShadow: [BoxShadow(color: Colors.black12, spreadRadius: 2)]),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.pinkAccent,
-                                border: Border.all(
-                                    width: 2.0,
-                                    color: Colors.white,
-                                    style: BorderStyle.solid),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/face2.jpg'),
-                                    fit: BoxFit.cover)),
-                          ),
-                          Padding(
-                              padding: EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Akash walia',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 30, right: 10),
-                              child: Text(
-                                '22 sep,19',
-                                style: TextStyle(color: Colors.white, shadows: [
-                                  Shadow(blurRadius: 2, color: Colors.black)
-                                ]),
-                              )),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            top: 100, left: 10, bottom: 10, right: 10),
-                        child: Row(
-                          children: <Widget>[
-                            RaisedButton.icon(
-                              onPressed: () {},
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.lightBlue,
-                                size: 20,
-                              ),
-                              label: Text(
-                                'For Buy,',
-                                style: TextStyle(
-                                    color: Colors.lightBlue, fontSize: 14),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 40, right: 0),
-                              child: Text(
-                                'Rohini,Delhi',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              ),
-                            )
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            )),
-
-        Container(
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/b4.jpg'), fit: BoxFit.fill),
-                borderRadius: BorderRadius.circular(30.0),
-                boxShadow: [BoxShadow(color: Colors.black12, spreadRadius: 2)]),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.pinkAccent,
-                                border: Border.all(
-                                    width: 2.0,
-                                    color: Colors.white,
-                                    style: BorderStyle.solid),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/face3.jpg'),
-                                    fit: BoxFit.cover)),
-                          ),
-                          Padding(
-                              padding: EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Akansha Singh',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 30, right: 10),
-                              child: Text(
-                                '22 sep,19',
-                                style: TextStyle(color: Colors.white, shadows: [
-                                  Shadow(blurRadius: 2, color: Colors.black)
-                                ]),
-                              )),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            top: 100, left: 10, bottom: 10, right: 10),
-                        child: Row(
-                          children: <Widget>[
-                            RaisedButton.icon(
-                              onPressed: () {},
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.lightBlue,
-                                size: 20,
-                              ),
-                              label: Text(
-                                'For Buy,',
-                                style: TextStyle(
-                                    color: Colors.lightBlue, fontSize: 14),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 40, right: 0),
-                              child: Text(
-                                'Rohini,Delhi',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              ),
-                            )
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            )),
-
-        Container(
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/b5.jpg'), fit: BoxFit.fill),
-                borderRadius: BorderRadius.circular(30.0),
-                boxShadow: [BoxShadow(color: Colors.black12, spreadRadius: 2)]),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.pinkAccent,
-                                border: Border.all(
-                                    width: 2.0,
-                                    color: Colors.white,
-                                    style: BorderStyle.solid),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/face4.png'),
-                                    fit: BoxFit.cover)),
-                          ),
-                          Padding(
-                              padding: EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Asha Shah',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 30, right: 10),
-                              child: Text(
-                                '22 sep,19',
-                                style: TextStyle(color: Colors.white, shadows: [
-                                  Shadow(blurRadius: 2, color: Colors.black)
-                                ]),
-                              )),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            top: 100, left: 10, bottom: 10, right: 10),
-                        child: Row(
-                          children: <Widget>[
-                            RaisedButton.icon(
-                              onPressed: () {},
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.lightBlue,
-                                size: 20,
-                              ),
-                              label: Text(
-                                'For Buy,',
-                                style: TextStyle(
-                                    color: Colors.lightBlue, fontSize: 14),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 40, right: 0),
-                              child: Text(
-                                'Rohini,Delhi',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              ),
-                            )
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            )),
-
-        Container(
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/b6.jpg'), fit: BoxFit.fill),
-                borderRadius: BorderRadius.circular(30.0),
-                boxShadow: [BoxShadow(color: Colors.black12, spreadRadius: 2)]),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.pinkAccent,
-                                border: Border.all(
-                                    width: 2.0,
-                                    color: Colors.white,
-                                    style: BorderStyle.solid),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/face5.jpg'),
-                                    fit: BoxFit.cover)),
-                          ),
-                          Padding(
-                              padding: EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Karishma ',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 30, right: 10),
-                              child: Text(
-                                '22 sep,19',
-                                style: TextStyle(color: Colors.white, shadows: [
-                                  Shadow(blurRadius: 2, color: Colors.black)
-                                ]),
-                              )),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            top: 100, left: 10, bottom: 10, right: 10),
-                        child: Row(
-                          children: <Widget>[
-                            RaisedButton.icon(
-                              onPressed: () {},
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.lightBlue,
-                                size: 20,
-                              ),
-                              label: Text(
-                                'For Buy,',
-                                style: TextStyle(
-                                    color: Colors.lightBlue, fontSize: 14),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 40, right: 0),
-                              child: Text(
-                                'Rohini,Delhi',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              ),
-                            )
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            )),
-
-        Container(
-            margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/b8.jpg'), fit: BoxFit.fill),
-                borderRadius: BorderRadius.circular(30.0),
-                boxShadow: [BoxShadow(color: Colors.black12, spreadRadius: 2)]),
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.pinkAccent,
-                                border: Border.all(
-                                    width: 2.0,
-                                    color: Colors.white,
-                                    style: BorderStyle.solid),
-                                image: DecorationImage(
-                                    image: AssetImage('assets/face1.jpg'),
-                                    fit: BoxFit.cover)),
-                          ),
-                          Padding(
-                              padding: EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Alok Nath',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              )),
-                          Padding(
-                              padding: EdgeInsets.only(left: 30, right: 10),
-                              child: Text(
-                                '22 sep,19',
-                                style: TextStyle(color: Colors.white, shadows: [
-                                  Shadow(blurRadius: 2, color: Colors.black)
-                                ]),
-                              )),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            top: 100, left: 10, bottom: 10, right: 10),
-                        child: Row(
-                          children: <Widget>[
-                            RaisedButton.icon(
-                              onPressed: () {},
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0)),
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.lightBlue,
-                                size: 20,
-                              ),
-                              label: Text(
-                                'For Buy,',
-                                style: TextStyle(
-                                    color: Colors.lightBlue, fontSize: 14),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 40, right: 0),
-                              child: Text(
-                                'Rohini,Delhi',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    shadows: [
-                                      Shadow(blurRadius: 2, color: Colors.black)
-                                    ]),
-                              ),
-                            )
-                          ],
-                        ))
-                  ],
-                ),
-              ],
-            ))
-      ],
-    );
   }
 }

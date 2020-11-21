@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:property_app/profile.dart';
@@ -6,7 +5,6 @@ import 'package:property_app/spalsh.dart';
 
 import 'favourites.dart';
 import 'homepage.dart';
-import 'intropage.dart';
 
 
 void main() {
@@ -75,15 +73,15 @@ class _MyHomePageState extends State<MyApp> {
         items:const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Home'),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            title: Text('favourites'),
+            label: 'favourites',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.face),
-            title: Text('profile'),
+            label: 'profile',
           ),
         ],
         currentIndex: bottomSelectedIndex,

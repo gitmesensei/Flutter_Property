@@ -8,7 +8,6 @@ import 'package:property_app/screen3.dart';
 import 'login.dart';
 
 
-
 class IntroPage extends StatefulWidget {
   @override
   _IntroPageState createState() => _IntroPageState();
@@ -68,28 +67,6 @@ class _IntroPageState extends State<IntroPage> {
 
             buildPageView(),
 
-          Container(
-            margin: EdgeInsets.only(top: 720,left: 20,right: 20),
-            width: double.infinity,
-            height: 80,
-            child: Row(
-
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-
-                RaisedButton(onPressed: (){
-
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
-                },
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                  child: Text('skip',style: TextStyle(color: Colors.lightBlue,fontSize: 20)),
-                ),
-
-              ],
-            ),
-          ),
-
           Center(child:
           Container(
             margin: EdgeInsets.only(top: 550),
@@ -141,8 +118,16 @@ class _IntroPageState extends State<IntroPage> {
 
 
         ],
-      )
-    )
+      ),
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.black,
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+            },
+            child:Text('Skip',style: TextStyle(color: Colors.white,)) ,
+
+        ),
+    ),
 
     );
   }
